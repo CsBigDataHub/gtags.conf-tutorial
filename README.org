@@ -10,3 +10,7 @@ Each record ends on a newline, unless the line ends with "\\". This allows to co
 Variables can be of different types. The most common are strings which have the format of "key=value".
 ** Including another record
 Since global only launches one target at a time and some settings may be common for multiple targets, there's a need to be able to define shared stuff in a single place. For this there's tc special variable. Wherever there's a variable definition like "tc=value" it tells global to read the contents of a record that has a "value" of it's record label. "[[https://github.com/sg2002/gtags.conf-tutorial/blob/master/gtags.conf#L44][tc=exuberant-ctags]]" tells global to read the contents of "[[https://github.com/sg2002/gtags.conf-tutorial/blob/master/gtags.conf#L84][exuberant-ctags]]" record.
+
+** Configuration
+  - Copy `gtags.conf` to `$HOME/.globalrc`
+  - Create a wrapper for using `gtags` with `ctags` backend, for example [[https://gist.github.com/leoliu/7314772][gctags]]
